@@ -1,0 +1,92 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  g_world.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_world.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_world.cpp')
+  
+  g_util_input.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_util_input.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_util_input.cpp')
+  
+  g_util.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_util.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_util.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_util.cpp(175,3): warning C4838: conversion from 'int' to 'BYTE' requires a narrowing conversion
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_util.cpp(502,6): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_util.cpp(529,14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_util.cpp(573,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_util.cpp(618,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  g_player.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_player.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_player.cpp')
+  
+  g_particle_system.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_particle_system.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_particle_system.cpp')
+  
+  g_particle.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_particle.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_particle.cpp')
+  
+  g_math.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_math.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_math.cpp')
+  
+  g_main.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_main.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_main.cpp')
+  
+  g_load.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_load.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_load.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_load.cpp(16,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_load.cpp(100,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_load.cpp(188,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\g_load.cpp(479,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  g_enemy.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(17,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_enemy.cpp')
+  
+C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\gl\glaux.h(374,9): warning C4068: unknown pragma 'option'
+  (compiling source file 'g_enemy.cpp')
+  
+  Generating Code...
+  winmainmaze.vcxproj -> C:\Users\thermionik\Code\C++\opengl\winmainmaze\winmainmaze___Win32_Debug\winmainmaze.exe

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{CD4BFA91-B0D2-4ECE-90F6-61422E2965F3}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\winmainmaze___Win32_Debug\</OutDir>
+    <IntDir>.\winmainmaze___Win32_Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\GL;C:\Users\thermionik\Code\C++\opengl\winmainmaze\include\SDL;C:\Users\thermionik\Code\C++\opengl\winmainmaze\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\winmainmaze___Win32_Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\winmainmaze___Win32_Debug\winmainmaze.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\winmainmaze___Win32_Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\winmainmaze___Win32_Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>E:\Development\Game\OpenGL\3D Engine 1\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\winmainmaze___Win32_Debug\winmainmaze.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\winmainmaze___Win32_Debug\winmainmaze.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>fmodvc.lib;glut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\winmainmaze.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\winmainmaze.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\winmainmaze.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>.\Release\winmainmaze.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="g_enemy.cpp" />
+    <ClCompile Include="g_framerate.cpp" />
+    <ClCompile Include="g_load.cpp" />
+    <ClCompile Include="g_main.cpp" />
+    <ClCompile Include="g_math.cpp" />
+    <ClCompile Include="g_particle.cpp" />
+    <ClCompile Include="g_particle_system.cpp" />
+    <ClCompile Include="g_player.cpp" />
+    <ClCompile Include="g_tex.cpp" />
+    <ClCompile Include="g_util.cpp" />
+    <ClCompile Include="g_util_input.cpp" />
+    <ClCompile Include="g_world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="coldet.h" />
+    <ClInclude Include="g_enemy.h" />
+    <ClInclude Include="g_framerate.h" />
+    <ClInclude Include="g_player.h" />
+    <ClInclude Include="g_util.h" />
+    <ClInclude Include="g_world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="coldet.lib" />
+    <Library Include="fmodvc.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

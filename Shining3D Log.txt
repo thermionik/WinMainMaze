@@ -1,0 +1,238 @@
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Loaded Art/Font.tga correctly.
+Shutdown:
+	Released RC and DC.
+	Released rendering context.
+	Released the Graphics Device Context.
+	Released Main Window Handle.
+	Unregistered window class.

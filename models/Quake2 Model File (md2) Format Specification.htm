@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://www.ugrad.cs.jhu.edu/~dansch/md2/ -->
+<HTML><HEAD><TITLE>Quake2 Model File (md2) Format Specification</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#ffffff vLink=#ffffff aLink=#cccccc link=#ffffff bgColor=#333333>
+<P align=center><FONT size=5><STRONG>.md2 File Format 
+Specification</STRONG></FONT></P>
+<P align=center><FONT size=3><STRONG>by </STRONG></FONT><A 
+href="mailto:dansch@hops.cs.jhu.edu"><FONT size=3><STRONG>Daniel E. 
+Schoenblum</STRONG></FONT></A></P>
+<P>&nbsp;</P><A name=INTRO>
+<P align=left><FONT color=#436888 size=4>INTRO</FONT></P>
+<P>This page will try and give some sort of technical documentation on the 
+Quake2 model format (.md2).</P>
+<P>These specs can be used freely for whatever you want. I only ask that people 
+<A href="mailto:dansch@hops.cs.jhu.edu">send me</A> corrections, suggestions, 
+etc.</P>
+<P align=left>Quake2 models are stored in files with the .md2 extension. This is 
+a custom format used only by Quake2 and (probably) Quake2 mission packs. md2 
+files can be generated from various other file formats by tools provided freely 
+by id, in original and modified form. A single md2 file contains the model's 
+geometry, frame information, skin filename(s), and texture coordinates. The file 
+is little-endian (intel byte ordering).</P><A name=HEADER>
+<P align=left><FONT color=#436888 size=4>HEADER</FONT></P>
+<P align=left>The header comes right at the start of the file. The information 
+in the header is needed to load different parts of the model. </P><A name=model>
+<P align=left><CODE>typedef struct <BR>{ <BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_magic">magic</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_version">version</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinWidth">skinWidth</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinHeight">skinHeight</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_frameSize">frameSize</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numSkins">numSkins</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numVertices">numVertices</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numTexCoords">numTexCoords</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numTriangles">numTriangles</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numGlCommands">numGlCommands</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numFrames">numFrames</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetSkins">offsetSkins</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetTexCoords">offsetTexCoords</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetTriangles">offsetTriangles</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetFrames">offsetFrames</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetGlCommands">offsetGlCommands</A>; 
+<BR>&nbsp;&nbsp;&nbsp;int <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetEnd">offsetEnd</A>; 
+<BR>} model_t;</CODE></P><A name=model_magic></A>
+<P align=left>int magic: A "magic number" used to identify the file. The magic 
+number is 844121161 in decimal (0x32504449 in hexadecimal). The magic number is 
+equal to the int "IDP2" (id polygon 2), which is formed by ('I' + ('D' &lt;&lt; 
+8) + ('P' &lt;&lt; 16) + ('2' &lt;&lt; 24)). </P>
+<P align=left><A target=_top name=model_version></A>int version: Version number 
+of the file. Always 8. </P>
+<P align=left><A target=_top name=model_skinWidth></A>int skinWidth: Width of 
+the skin(s) in pixels. </P>
+<P align=left><A target=_top name=model_skinHeight></A>int skinHeight: Height of 
+the skin(s) in pixels. </P>
+<P align=left><A target=_top name=model_frameSize></A>int frameSize: Size of 
+each <A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#FRAMES">frame</A> in 
+bytes. </P>
+<P align=left><A target=_top name=model_numSkins></A>int numSkins: Number of 
+skins associated with this model. </P>
+<P align=left><A target=_top name=model_numVertices></A>int numVertices: Number 
+of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">vertices</A> in 
+each frame. </P>
+<P align=left><A target=_top name=model_numTexCoords></A>int numTexCoords: 
+Number of texture coordinates (not necessarily the same as the number of 
+vertices). </P>
+<P align=left><A target=_top name=model_numTriangles></A>int numTriangles: 
+Number of triangles in each frame. </P>
+<P align=left><A target=_top name=model_numGlCommands></A>int numGlCommands: 
+Number of dwords (4 bytes) in the gl command list. </P>
+<P align=left><A target=_top name=model_numFrames></A>int numFrames: Number of 
+<A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#FRAMES">frames</A>. </P>
+<P align=left><A target=_top name=model_offsetSkins></A>int offsetSkins: Offset, 
+in bytes from the start of the file, to the list of skin names. </P>
+<P align=left><A target=_top name=model_offsetTexCoords></A>int offsetTexCoords: 
+Offset, in bytes from the start of the file, to the list of texture coordinates. 
+</P>
+<P align=left><A target=_top name=model_offsetTriangles></A>int offsetTriangles: 
+Offset, in bytes from the start of the file, to the list of triangles. </P>
+<P align=left><A target=_top name=model_offsetFrames></A>int offsetFrames: 
+Offset, in bytes from the start of the file, to the list of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#FRAMES">frames</A>. </P>
+<P align=left><A target=_top name=model_offsetGlCommands></A>int 
+offsetGlCommands: Offset, in bytes from the start of the file, to the gl command 
+list. </P>
+<P align=left><A target=_top name=model_offsetEnd></A>int offsetEnd: Offset, in 
+bytes from the start of the file, to the end (size of the file). </P><A 
+name=FRAMES></A>
+<P align=left><FONT color=#436888 size=4>FRAMES</FONT></P>
+<P align=left>Each frame contains the positions in 3D space for each vertex of 
+each triangle that makes up the model. Quake 2 (and Quake) models contain only 
+triangles. </P><A name=triangleVertex><CODE>typdef 
+struct<BR>{<BR>&nbsp;&nbsp;&nbsp;byte <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex_vertex">vertex</A>[3];<BR>&nbsp;&nbsp;&nbsp;byte 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex_lightNormalIndex">lightNormalIndex</A>;<BR>} 
+triangleVertex_t;<BR></CODE>
+<P align=left><A target=_top name=triangleVertex_vertex></A>byte vertex[3]: The 
+three bytes represent the x, y, and z coordinates of this vertex. This is not 
+the "real" vertex coordinate. This is a scaled version of the coordinate, scaled 
+so that each of the three numbers fit within one byte. To scale the vertex back 
+to the "real" coordinate, you need to first multiply each of the bytes by their 
+respective float <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_scale">scale</A> in the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame">frame_t</A> structure, and 
+then add the respective float <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_translate">translation&lt; 
+/a&gt;, also in the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame">frame_t</A> structure. 
+This will give you the vertex coordinate relative to the model's origin, which 
+is at the origin, (0, 0, 0). </P>
+<P align=left><A target=_top name=triangleVertex_lightNormalIndex></A>byte 
+lightNormalIndex: This is an index into a table of normals kept by Quake2. To 
+get the table, you need to download <A 
+href="ftp://ftp.idsoftware.com/idstuff/quake2/source/q2source_12_11.zip">this 
+zip file (1.7 MB)</A>, released by <A href="http://www.idsoftware.com/">id</A>, 
+that has the source code to all of the tools they used for quake2. </P><A 
+name=frame>
+<P align=left><CODE>typedef struct<BR>{<BR>&nbsp;&nbsp;&nbsp;float <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_scale">scale</A>[3];<BR>&nbsp;&nbsp;&nbsp;float 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_translate">translate</A>[3];<BR>&nbsp;&nbsp;&nbsp;char 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_name">name</A>[16];<BR>&nbsp;&nbsp;&nbsp;<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">triangleVertex_t</A> 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_vertices">vertices</A>[1];<BR>} 
+frame_t;<BR></CODE>
+<P align=left>frame_t is a variable sized structure, however all frame_t 
+structures within the same file will have the same size (<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numVertices">numVertices</A> 
+in the <A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model">header</A>) </P>
+<P align=left><A target=_top name=frame_scale></A>float scale[3]: This is a 
+scale used by the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex_vertex">vertex</A> 
+member of the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">triangleVertex_t</A> 
+structure. </P>
+<P align=left><A target=_top name=frame_translate></A>float translate[3]: This 
+is a translation used by the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex_vertex">vertex</A> 
+member of the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">triangleVertex_t</A> 
+structure. </P>
+<P align=left><A target=_top name=frame_name></A>char name[16]: This is a name 
+for the frame. </P>
+<P align=left><A target=_top name=frame_vertices></A><A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">triangleVertex_t</A> 
+vertices[1]: An array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numVertices">numVertices</A> 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">triangleVertex_t</A> 
+structures. </P><A name=TRIANGLES></A>
+<P align=left><FONT color=#436888 size=4>TRIANGLES</FONT> </P>
+<P align=left>Quake 2 models are made up of only triangles. At <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetTriangles">offsetTriangles</A> 
+in the file is an array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangle">triangle_t</A> 
+structures. The array has <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numTriangles">numTriangles</A> 
+structures in it. </P><A name=triangle>
+<P align=left><CODE>typedef struct<BR>{<BR>&nbsp;&nbsp;&nbsp;short <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangle_vertexIndices">vertexIndices</A>[3];<BR>&nbsp;&nbsp;&nbsp;short 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangle_textureIndices">textureIndices</A>[3];<BR>} 
+triangle_t;<BR></CODE>
+<P align=left><A target=_top name=triangle_vertexIndices></A>short 
+vertexIndices: These three shorts are indices into the array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_vertices">vertices</A> in 
+each <A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame">frames</A>. In 
+other words, the number of triangles in a md2 file is fixed, and each triangle 
+is always made of the same three indices into each frame's array of vertices. 
+So, in each frame, the triangles themselves stay intact, their vertices are just 
+moved around. </P>
+<P align=left><A target=_top name=triangle_textureIndices></A>short 
+textureIndices: These three shorts are indices into the array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#textureCoordinate">texture 
+coordinates</A>. </P><A name=SKINS>
+<P align=left><FONT color=#436888 size=4>SKINS</FONT> </P>
+<P align=left>There is an array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numSkins">numSkins</A> skin 
+names stored at <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetSkins">offsetSkins</A> 
+into the file. Each skin name is a char[64]. The name is really a path to the 
+skin, relative to the base game directory (baseq2 f or "standard" Quake2). The 
+skin files are regular pcx files. </P><A name=textureCoordinate>
+<P align=left><CODE>typedef struct<BR>{<BR>&nbsp;&nbsp;&nbsp;short <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#textureCoordinate_st">s</A>, <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#textureCoordinate_st">t</A>;<BR>} 
+textureCoordinate_t;<BR></CODE>
+<P align=left><A target=_top name=textureCoordinate_s><A target=_top 
+name=textureCoordinate_t>short s, t: These two shorts are used to map a vertex 
+onto a skin. The horizontal axis position is given by s, and the vertical axis 
+position is given by t. The range for s is greater than or equal to 0 and less 
+than <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinWidth">skinWidth&lt; 
+/a&gt; (<CODE>0 &lt;= s &lt; <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinWidth">skinWidth</A></CODE>). 
+The range for t is greater than or equal to 0 and less than <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinHeight">skinHeight</A> 
+(<CODE>0 &lt;= s &lt; <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_skinHeight">skinHeight</A></CODE>). 
+N ote that the ranges are different than in the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex_s">s</A> and <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex_t">t</A> members 
+of the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex">glCommandVertex</A> 
+structure. </P><A name=GL_COMMANDS>
+<P align=left><FONT color=#436888 size=4>GL COMMANDS</FONT> </P>At <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_offsetGlCommands">offsetGlCommands</A> 
+bytes into the file, there is the gl command list, which is made up of a series 
+of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#model_numGlCommands">numGlCommands</A> 
+int's and float's, organized into groups. Each group starts with an int. If it 
+is positive, it is followed by that many <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex">glCommandVertex_t</A> 
+structures, which form a triangle strip. If it is negative, it is followed by -x 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex">glCommandVertex_t</A> 
+structures, which fo rm a triangle fan. A 0 indicates the end of the list. The 
+list is an optimized way of issuing commands when rendering with <A 
+href="http://www.opengl.org/">OpenGl</A>. <A name=glCommandVertex>
+<P align=left><CODE>typedef struct<BR>{<BR>&nbsp;&nbsp;&nbsp;float <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex_st">s</A>, <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex_st">t</A>;<BR>&nbsp;&nbsp;&nbsp;int 
+<A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#glCommandVertex_vertexIndex">vertexIndex</A>;<BR>} 
+glCommandVertex_t;<BR></CODE>
+<P align=left><A target=_top name=glCommandVertex_s><A target=_top 
+name=glCommandVertex_t>float s, t: These two floats are used to map a vertex 
+onto a skin. The horizontal axis position is given by s, and the vertical axis 
+position is given by t. The range for s and for t is 0.0 to 1.0. Note that the 
+ranges are different than in the <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#textureCoordinate">textureCoordinate_t</A> 
+structure. They are stored as floats here because that's the way Quake2 passes 
+them to <A href="http://www.opengl.org/">OpenGl</A>. </P>
+<P align=left><A target=_top name=glCommandVertex_vertexIndex>int vertexIndex: 
+Index into the array of <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame_vertices">vertices</A> 
+stored in each <A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#frame">frame</A>. </P>
+<P align=left><FONT color=#436888 size=4>MAXIMUMS</FONT></P>
+<P align=left>Quake2 has some pre-defined limits, so that dynamic memory does 
+not need to be used. You can use these to your advantage to speed up loading if 
+you want. </P>
+<P align=left>
+<LI><A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#TRIANGLES">Triangles</A>: 
+4096 
+<LI><A 
+href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#triangleVertex">Vertices</A>: 
+2048 
+<LI><A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#textureCoordinate">Texture 
+Coordinates</A>: 2048 
+<LI><A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#FRAMES">Frames</A>: 512 
+<LI><A href="http://www.ugrad.cs.jhu.edu/~dansch/md2/#SKINS">Skins</A>: 32 
+<P></P><BR>
+<P align=left><FONT size=-1>Quake and Quake2 are trademarks of <A 
+href="http://www.idsoftware.com/">id Software</A>.<BR>All trademarks used are 
+properties of their respective owners. </FONT></P></LI></BODY></HTML>

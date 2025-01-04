@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{00095565-fc3e-4802-9f5e-e0742bd90821}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{98b0c239-bf4c-4367-a244-7c90b53fe653}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{a6b6fa1e-3190-4b7c-907b-d40ed9c6a79e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="g_enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_framerate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_load.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_particle_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_tex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_util_input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="coldet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g_enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g_framerate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g_player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g_world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="coldet.lib" />
+    <Library Include="fmodvc.lib" />
+  </ItemGroup>
+</Project>

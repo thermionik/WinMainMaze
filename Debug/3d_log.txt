@@ -1,0 +1,16 @@
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Art/Font.tga does not exist.
+Window initiation:
+	Window class registered
+	OpenGL Device Context created.
+	Found suitable pixel format
+	Set pixel format.
+	Created a OpenGL Rendering Context.
+	Activated an OpenGL Rendering Context
+Art/Font.tga does not exist.
